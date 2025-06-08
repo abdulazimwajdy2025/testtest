@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>درجات طلاب المرحلة الابتدائية بمدرسة محمود حمد الرسمية للغات</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Spinner -->
+    <div id="loading-spinner" class="loading-spinner hidden">
+        <div class="spinner"></div>
+        <p>جاري البحث...</p>
+    </div>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="logo-container">
+                <img src="https://via.placeholder.com/120/FFD700/000000?text=شعار" alt="شعار المدرسة" class="logo">
+            </div>
+            <div class="school-info">
+                <h1 class="school-title">درجات المرحلة الابتدائية</h1>
+                <h2 class="school-name">مدرسة محمود حمد الرسمية للغات</h2>
+                <div class="staff-info">
+                    <div class="staff-member">
+                        <i class="fas fa-user-tie"></i>
+                        <span>مدير المدرسة: مستر/ عادل أحمد</span>
+                    </div>
+                    <div class="staff-member">
+                        <i class="fas fa-user-graduate"></i>
+                        <span>وكيلة المرحلة: م/ نهي عاطف</span>
+                    </div>
+                    <div class="staff-member">
+                        <i class="fas fa-clipboard-list"></i>
+                        <span>كنترول المرحلة: م/هيثم معوض</span>
+                    </div>
+                    <div class="staff-member">
+                        <i class="fas fa-database"></i>
+                        <span>مسؤل رفع البيانات: م/عبدالعظيم وجدي</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="search-container">
+                <h3 class="search-title">
+                    <i class="fas fa-search"></i>
+                    البحث عن نتيجة الطالب
+                </h3>
+                <div class="search-form">
+                    <div class="input-group">
+                        <input 
+                            type="text" 
+                            id="search-input" 
+                            placeholder="أدخل الرقم القومي باللغة الإنجليزية"
+                            maxlength="14"
+                            pattern="[0-9]{14}"
+                        >
+                        <div class="input-icon">
+                            <i class="fas fa-id-card"></i>
+                        </div>
+                    </div>
+                    <button id="search-button" class="search-btn">
+                        <i class="fas fa-search"></i>
+                        <span>بحث بالرقم القومي</span>
+                    </button>
+                </div>
+                <div class="search-help">
+                    <p><i class="fas fa-info-circle"></i> يرجى إدخال الرقم القومي مكون من 14 رقم</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section id="result-section" class="result-section hidden">
+            <div id="result" class="result-container"></div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 مدرسة محمود حمد الرسمية للغات - جميع الحقوق محفوظة</p>
+        </footer>
+    </div>
+
+    <!-- Success/Error Messages -->
+    <div id="message-container" class="message-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
